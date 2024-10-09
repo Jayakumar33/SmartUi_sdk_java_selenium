@@ -51,12 +51,22 @@ public class SmartUISDKCloud {
         System.out.println("Loading Url");
         driver.get("https://www.lambdatest.com/visual-regression-testing");
         Thread.sleep(1000);
-        SmartUISnapshot.smartuiSnapshot(driver, "visual-regression-testing");
+        SmartUISnapshot.smartuiSnapshot(driver, "visual-regression-testing-1");
         Thread.sleep(5000);
         driver.get("https://www.lambdatest.com");
         Thread.sleep(1000);
-        SmartUISnapshot.smartuiSnapshot(driver, "homepage");
+        SmartUISnapshot.smartuiSnapshot(driver, "homepage-2");
         Thread.sleep(1000);
+
+        driver.get("https://www.lambdatest.com");
+        Thread.sleep(1000);
+        SmartUISnapshot.smartuiSnapshot(driver, "homepage-3");
+        Thread.sleep(1000);
+
+        driver.get("https://www.lambdatest.com/visual-regression-testing");
+        Thread.sleep(1000);
+        SmartUISnapshot.smartuiSnapshot(driver, "visual-regression-testing-4");
+        Thread.sleep(5000);
         System.out.println("Test Finished");
     }
 
