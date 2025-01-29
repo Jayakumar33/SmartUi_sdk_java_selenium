@@ -50,6 +50,14 @@ public class SmartUISDKCloud {
     public void basicTest() throws Exception {
         System.out.println("Loading Url");
         driver.get("https://www.lambdatest.com/visual-regression-testing");
+
+        Thread.sleep(5000);
+        SmartUISnapshot.smartuiSnapshot(driver, "visual-regression-testing");
+        Thread.sleep(5000);
+        driver.get("https://www.lambdatest.com");
+        Thread.sleep(1000);
+        Thread.sleep(1000);
+        SmartUISnapshot.smartuiSnapshot(driver, "homepage");
         Thread.sleep(1000);
         SmartUISnapshot.smartuiSnapshot(driver, "visual-regression-testing-1");
         Thread.sleep(5000);
@@ -61,7 +69,7 @@ public class SmartUISDKCloud {
         driver.get("https://www.lambdatest.com");
         Thread.sleep(1000);
         SmartUISnapshot.smartuiSnapshot(driver, "homepage-3");
-        Thread.sleep(1000);
+
 
         driver.get("https://www.lambdatest.com/visual-regression-testing");
         Thread.sleep(1000);
