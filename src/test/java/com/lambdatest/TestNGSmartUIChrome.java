@@ -1,5 +1,5 @@
 package com.lambdatest;
-
+// mvn test -D suite=smartui-mobile.xml
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -40,8 +40,8 @@ public class TestNGSmartUIChrome {
     caps.setCapability("build", "TestNG With Java");
     caps.setCapability("name", m.getName() + " - " + this.getClass().getName());
     caps.setCapability("plugin", "git-testng");
-    caps.setCapability("smartUI.project", "testng-smartui-web-project-parallel");
-    caps.setCapability("smartUI.build", generatedString);
+    caps.setCapability("smartUI.project", "demo_5th");
+    caps.setCapability("smartUI.build", "NON_Baseline");
     caps.setCapability("selenium_version", "4.8.0");
 
     if (githubURL != null) {
@@ -75,7 +75,7 @@ public class TestNGSmartUIChrome {
     Thread.sleep(1000);
 
     driver.get("https://www.lambdatest.com/support/docs/");
-    Thread.sleep(5000);
+//    Thread.sleep(5000);
     driver.executeScript("smartui.takeScreenshot=docs");
     Status = "passed";
     System.out.println("TestNGSmartUIChrome TestFinished");

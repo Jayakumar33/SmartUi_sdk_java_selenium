@@ -6,5 +6,5 @@
       <class name="com.lambdatest.TestNGSmartUIChrome"/>
       <class name="com.lambdatest.TestNGSmartUIFirefox"/>
     </classes>
-  </test> <!-- Test -->
+  </test> <!-- mvn test -D suite=smartui-parallel.xml -->
 </suite> <!-- Suite -->
